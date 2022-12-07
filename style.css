@@ -1,0 +1,27 @@
+.task-list-bg-color {
+    background-color: lightsalmon;
+}
+
+.task-list-item {
+    border: 100px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+}
+
+button {
+  text-align: center;
+  position: inherit;
+  height: 30px;
+  width: 180px;
+  margin-top: auto;
+  margin-bottom: auto;
+  border: black;
+  background-color: lightgray;
+  border-radius: 30px;
+  font-size: 20px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
