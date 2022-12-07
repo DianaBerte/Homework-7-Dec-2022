@@ -113,11 +113,12 @@ Create a method "getTasksAsArray" which returns, and prints to the console an ar
 */
 
 const getTasksAsArray = function () {
-    let arrayOfTasks = ["task1","task2","task3","task4"];
-    for (let i = 0; i < arrayOfTasks.length; i++) {
-        let array = arrayOfTasks[i];
+    let liNodes = document.getElementsByTagName('li');
+    let arr = [];
+    for (let li of liNodes) {
+        arr.push(li.innerText);
     }
-    return arrayOfTasks
+    console.log(arr);
 }
 
 /* EXERCISE 9:
