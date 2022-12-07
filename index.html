@@ -107,14 +107,28 @@ const removeFirst = function () {
 Create a method "getTasksAsArray" which returns, and prints to the console an array containing the tasks as strings
 */
 
-const getTasksArray = function () {
-    
+const getTasksAsArray = function () {
+    let arrayOfTasks = ["task1","task2","task3","task4"];
+    for (let i = 0; i < arrayOfTasks.length; i++) {
+        let array = arrayOfTasks[i];
+    }
+    return arrayOfTasks
 }
 
 /* EXERCISE 9:
 Create a method "changeTaskBackgroundColor" which takes the color from the color picker with an 
 onchange event listener ad applies it as background to every list item
 */
+
+function changeTaskBackgroundColor () {
+    let listItems = document.getElementsByTagName('li');
+    let colorPicker = document.getElementById('colorPicker');
+    colorPicker.addEventListener('change', function() {
+        for (let i = 0; i < listItems.length; i++) {
+            listItems[i].style.backgroundColor = colorPicker.value;
+        }
+    }); 
+}
 
 /* EXTRA */
 
