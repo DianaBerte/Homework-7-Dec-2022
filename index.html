@@ -37,20 +37,20 @@ The user should be able to see the list of tasks, add new ones, delete existing 
     ><br /><br />
 
     <input type="text" id="newTask" />
-    <input type="button" value="Add new Task" onclick="addNewTask()" />
+    <input type="button" value="Add new Task" onclick="addNewTask2()" />
 
     <!-- EXERCISE 3
         Create a button "Remove Last Task" to trigger the method "removeLast"
         -->
         <div>
-            <button onclick="removeLast">Remove Last Task</button>
+            <button onclick="removeLast()">Remove Last Task</button>
         </div>
 
     <!-- EXERCISE 4
         Create a button "Remove First Task" to trigger the method "removeFirst"
         -->
         <div>
-            <button onclick="removeFirst">Remove First Task</button>
+            <button onclick="removeFirst()">Remove First Task</button>
         </div>
 
     <ul id="myTaskList"></ul>
@@ -68,7 +68,7 @@ The user should be able to see the list of tasks, add new ones, delete existing 
 
     <input type="button" value="Sort" onclick="bubblesort()" />
 
-    <script src="index.js">
+    <script>
 /* EXERCISE 5 (JS from here on): 
 Add a new task to the list.
 Suggestion:
@@ -76,13 +76,18 @@ Suggestion:
   - Use the document.createElement to create the new List Item
   - Append the LI child to the UL
 */
+   
 
-const addNewTask = function () {
+function addNewTask2() {
     let ulNode = document.getElementById('myTaskList');
     let inputNode = document.getElementById('newTask');
 
-    inputNode.value = document.createElement('li');
-    ulNode.appendChild(newItemNode)
+    let content = inputNode.value;
+    let liNode = document.createElement('li');
+
+    liNode.innerText = content;
+    ulNode.appendChild(liNode);    
+    inputNode.value = '';    
 }
 
 /* EXERCISE 6: 
@@ -90,8 +95,8 @@ Create a method "removeLast" which removes the last item from the task list
 */
 
 const removeLast = function () {
-    let ulNode = document.getElementById('myTaskList')[0];
-    let lastNode = ulNode.removeChild(lastNode.lastElementChild)
+    let ulNode = document.getElementById('myTaskList');
+    ulNode.removeChild(ulNode.lastChild)
 }
 
 /* EXERCISE 7: 
@@ -99,8 +104,8 @@ Create a method "removeFirst" which removes the first item from the task list
 */
 
 const removeFirst = function () {
-    let ulNode = document.getElementById('myTaskList')[0];
-    ulNode.removeChild(ulNode.firstElementChild);
+    let ulNode = document.getElementById('myTaskList');
+    ulNode.removeChild(ulNode.firstChild);
 }
 
 /* EXERCISE 8: 
