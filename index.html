@@ -78,10 +78,10 @@ Suggestion:
 */
 
 const addNewTask = function () {
-    let ulNode = document.getElementById('myTaskList')[0];
-    let inputNode = document.getElementById('colorPicker')[0];
+    let ulNode = document.getElementById('myTaskList');
+    let inputNode = document.getElementById('newTask');
 
-    let newItemNode = document.createElement('li');
+    inputNode.value = document.createElement('li');
     ulNode.appendChild(newItemNode)
 }
 
